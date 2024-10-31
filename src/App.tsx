@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './pages/Header';
+import Home from './pages/Home';
+import Laser from './pages/Laser';
+import Facial from './pages/Facial';
+import Peels from './pages/Peels';
+import PermanentTattoo from './pages/PermanentTattoo';
+import SpaTreatments from './pages/SpaTreatments';
+import PriceList from './pages/PriceList';
+import Gallery from './pages/Gallery';
+import Products from './pages/Products';
+import Specials from './pages/Specials';
+import Contact from './pages/Contact';
+import OurTeam from './pages/OurTeam';
+import Footer from './pages/Footer';
 
-function App() {
+const LandingPage = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Home />
+      <OurTeam />
+    </>
   );
-}
+};
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/laser" element={<Laser />} />
+            <Route path="/facial" element={<Facial />} />
+            <Route path="/peels" element={<Peels />} />
+            <Route path="/permanent-tattoo" element={<PermanentTattoo />} />
+            <Route path="/spa-treatments" element={<SpaTreatments />} />
+            <Route path="/price-list" element={<PriceList />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/specials" element={<Specials />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
