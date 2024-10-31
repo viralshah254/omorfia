@@ -101,7 +101,7 @@ const Laser = () => {
                         </div>
                         <div className="aspect-[4/3] bg-timber-wolf/10">
                             <img 
-                                src="/api/placeholder/800/600" 
+                                src="https://omorfia.s3.eu-north-1.amazonaws.com/laser2d.png" 
                                 alt="Laser Hair Removal"
                                 className="w-full h-full object-cover"
                             />
@@ -146,7 +146,7 @@ const Laser = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 aspect-[4/3] bg-timber-wolf/10">
                             <img 
-                                src="/api/placeholder/800/600" 
+                                src="https://omorfia.s3.eu-north-1.amazonaws.com/ipl.png" 
                                 alt="IPL Treatment"
                                 className="w-full h-full object-cover"
                             />
@@ -207,7 +207,7 @@ const Laser = () => {
                         </div>
                         <div className="aspect-[4/3] bg-timber-wolf/10">
                             <img 
-                                src="/api/placeholder/800/600" 
+                                src="https://omorfia.s3.eu-north-1.amazonaws.com/diodelaser.png" 
                                 alt="Diode Laser Treatment"
                                 className="w-full h-full object-cover"
                             />

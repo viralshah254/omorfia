@@ -89,7 +89,7 @@ const Facial = () => {
                         </div>
                         <div className="aspect-[4/3] bg-timber-wolf/10">
                             <img 
-                                src="/api/placeholder/800/600" 
+                                src="https://omorfia.s3.eu-north-1.amazonaws.com/facials.png" 
                                 alt="Aromatic Facial"
                                 className="w-full h-full object-cover"
                             />
@@ -102,7 +102,7 @@ const Facial = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 aspect-[4/3] bg-timber-wolf/10">
                             <img 
-                                src="/api/placeholder/800/600" 
+                                src="https://omorfia.s3.eu-north-1.amazonaws.com/oxygenfacial.png" 
                                 alt="Oxygenating Facial"
                                 className="w-full h-full object-cover"
                             />
@@ -137,7 +137,7 @@ const Facial = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="font-bodoni text-3xl md:text-4xl text-lapis-lazuli mb-6">
-                                Catheoderm Facial Treatment
+                                Catheodermie Facial Treatment
                             </h2>
                             <p className="text-eerie-black/80 mb-6">
                                 An innovative skincare treatment using advanced microcurrent technology combined with targeted skincare products to enhance skin tone, texture, and overall appearance.
@@ -164,7 +164,7 @@ const Facial = () => {
                         </div>
                         <div className="aspect-[4/3] bg-timber-wolf/10">
                             <img 
-                                src="/api/placeholder/800/600" 
+                                src="https://omorfia.s3.eu-north-1.amazonaws.com/hydra.jpg" 
                                 alt="Catheoderm Facial"
                                 className="w-full h-full object-cover"
                             />
