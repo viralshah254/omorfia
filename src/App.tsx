@@ -14,6 +14,7 @@ import Specials from './pages/Specials';
 import Contact from './pages/Contact';
 import OurTeam from './pages/OurTeam';
 import Footer from './pages/Footer';
+import AboutUs from './pages/AboutUs';
 
 const LandingPage = () => {
   return (
@@ -42,6 +43,7 @@ const App: React.FC = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/specials" element={<Specials />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
         </main>
         <Footer />

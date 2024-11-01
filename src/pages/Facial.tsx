@@ -22,7 +22,7 @@ const Facial = () => {
             <div className="relative h-[50vh] bg-eerie-black overflow-hidden">
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url("/api/placeholder/1920/1080")' }}
+                    style={{ backgroundImage: 'url("https://omorfia.s3.eu-north-1.amazonaws.com/facemassage.jpg")' }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
                 </div>
@@ -62,6 +62,7 @@ const Facial = () => {
                 animate="visible"
                 className="max-w-7xl mx-auto px-4 py-16 md:py-24"
             >
+                {/* Rest of the content remains exactly the same... */}
                 {/* Aromatic Facial Section */}
                 <motion.section variants={itemVariants} className="mb-20">
                     <div className="grid md:grid-cols-2 gap-12 items-center">

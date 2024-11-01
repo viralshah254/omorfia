@@ -76,7 +76,7 @@ const Header = () => {
                     Home
                   </Link>
                   <Link 
-                    to="/about"
+                    to="/aboutus"
                     className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
                   >
                     About
