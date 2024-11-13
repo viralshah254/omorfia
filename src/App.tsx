@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Laser from './pages/Laser';
 import Facial from './pages/Facial';
 import Peels from './pages/Peels';
-import PermanentTattoo from './pages/PermanentTattoo';
+import PermanentMakeUp from './pages/PermanentMakeUp';
 import SpaTreatments from './pages/SpaTreatments';
 import PriceList from './pages/PriceList';
 import Gallery from './pages/Gallery';
@@ -36,7 +36,7 @@ const App: React.FC = () => {
             <Route path="/laser" element={<Laser />} />
             <Route path="/facial" element={<Facial />} />
             <Route path="/peels" element={<Peels />} />
-            <Route path="/permanent-tattoo" element={<PermanentTattoo />} />
+            <Route path="/permanent-makeup" element={<PermanentMakeUp/>} />
             <Route path="/spa-treatments" element={<SpaTreatments />} />
             <Route path="/price-list" element={<PriceList />} />
             <Route path="/gallery" element={<Gallery />} />

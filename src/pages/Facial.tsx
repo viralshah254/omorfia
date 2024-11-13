@@ -62,7 +62,6 @@ const Facial = () => {
                 animate="visible"
                 className="max-w-7xl mx-auto px-4 py-16 md:py-24"
             >
-                {/* Rest of the content remains exactly the same... */}
                 {/* Aromatic Facial Section */}
                 <motion.section variants={itemVariants} className="mb-20">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -134,7 +133,7 @@ const Facial = () => {
                 </motion.section>
 
                 {/* Catheoderm Facial Section */}
-                <motion.section variants={itemVariants}>
+                <motion.section variants={itemVariants} className="mb-20">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="font-bodoni text-3xl md:text-4xl text-lapis-lazuli mb-6">
@@ -143,24 +142,19 @@ const Facial = () => {
                             <p className="text-eerie-black/80 mb-6">
                                 An innovative skincare treatment using advanced microcurrent technology combined with targeted skincare products to enhance skin tone, texture, and overall appearance.
                             </p>
-                            <div className="space-y-6">
-                                <div>
-                                    <h3 className="font-bodoni text-xl text-eerie-black mb-2">Key Benefits</h3>
-                                    <ul className="space-y-3">
-                                        {[
-                                            'Natural lifting and tightening',
-                                            'Enhanced circulation',
-                                            'Deep hydration',
-                                            'Reduced fine lines',
-                                            'Customized treatment approach'
-                                        ].map((benefit) => (
-                                            <li key={benefit} className="flex items-center gap-2">
-                                                <FaCheck className="text-lapis-lazuli flex-shrink-0" />
-                                                <span className="text-eerie-black/80">{benefit}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                            <div className="space-y-3">
+                                {[
+                                    'Natural lifting and tightening',
+                                    'Enhanced circulation',
+                                    'Deep hydration',
+                                    'Reduced fine lines',
+                                    'Customized treatment approach'
+                                ].map((benefit) => (
+                                    <li key={benefit} className="flex items-center gap-2">
+                                        <FaCheck className="text-lapis-lazuli flex-shrink-0" />
+                                        <span className="text-eerie-black/80">{benefit}</span>
+                                    </li>
+                                ))}
                             </div>
                         </div>
                         <div className="aspect-[4/3] bg-timber-wolf/10">
@@ -169,6 +163,111 @@ const Facial = () => {
                                 alt="Catheoderm Facial"
                                 className="w-full h-full object-cover"
                             />
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* Diamond Microdermabrasion Section */}
+                <motion.section variants={itemVariants} className="mb-20">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="order-2 md:order-1 aspect-[4/3] bg-timber-wolf/10">
+                            <img 
+                                src="/api/placeholder/400/300" 
+                                alt="Diamond Microdermabrasion"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="order-1 md:order-2">
+                            <h2 className="font-bodoni text-3xl md:text-4xl text-lapis-lazuli mb-6">
+                                Diamond Microdermabrasion Facial
+                            </h2>
+                            <p className="text-eerie-black/80 mb-6">
+                                A non-invasive skincare treatment utilizing diamond-tipped tools to gently exfoliate the skin's surface, revealing a smoother, brighter complexion while promoting cellular renewal.
+                            </p>
+                            <div className="space-y-3">
+                                {[
+                                    'Deep Exfoliation and unclogged pores',
+                                    'Enhanced skin tone and clarity',
+                                    'Reduced fine lines and wrinkles',
+                                    'Boosted collagen production',
+                                    'Customizable treatment approach'
+                                ].map((benefit) => (
+                                    <div key={benefit} className="flex items-center gap-2">
+                                        <FaCheck className="text-lapis-lazuli flex-shrink-0" />
+                                        <span className="text-eerie-black/80">{benefit}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* A-Lift Facial Section */}
+                <motion.section variants={itemVariants} className="mb-20">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="font-bodoni text-3xl md:text-4xl text-lapis-lazuli mb-6">
+                                A-Lift Anti-Aging Facial
+                            </h2>
+                            <p className="text-eerie-black/80 mb-6">
+                                A non-invasive facial treatment focusing on tightening and lifting the skin using advanced radio frequency technology to reduce the appearance of fine lines and wrinkles.
+                            </p>
+                            <div className="space-y-3">
+                                {[
+                                    'Advanced RF technology application',
+                                    'Enhanced collagen production',
+                                    'Improved skin elasticity',
+                                    'Natural lifting effect',
+                                    'Non-surgical facelift alternative'
+                                ].map((benefit) => (
+                                    <div key={benefit} className="flex items-center gap-2">
+                                        <FaCheck className="text-lapis-lazuli flex-shrink-0" />
+                                        <span className="text-eerie-black/80">{benefit}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="aspect-[4/3] bg-timber-wolf/10">
+                            <img 
+                                src="/api/placeholder/400/300" 
+                                alt="A-Lift Facial"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* Microneedling Facial Section */}
+                <motion.section variants={itemVariants} className="mb-20">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="order-2 md:order-1 aspect-[4/3] bg-timber-wolf/10">
+                            <img 
+                                src="/api/placeholder/400/300" 
+                                alt="Microneedling Facial"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="order-1 md:order-2">
+                            <h2 className="font-bodoni text-3xl md:text-4xl text-lapis-lazuli mb-6">
+                                Microneedling Facial Treatment
+                            </h2>
+                            <p className="text-eerie-black/80 mb-6">
+                                A revolutionary skincare treatment using fine needles to create controlled micro-injuries, stimulating your skin's natural healing process and encouraging collagen production for smoother, firmer skin.
+                            </p>
+                            <div className="space-y-3">
+                                {[
+                                    'Improved skin texture and reduced pore size',
+                                    'Reduced fine lines and wrinkles',
+                                    'Diminished acne scarring',
+                                    'Even skin tone and reduced hyperpigmentation',
+                                    'Enhanced product absorption'
+                                ].map((benefit) => (
+                                    <div key={benefit} className="flex items-center gap-2">
+                                        <FaCheck className="text-lapis-lazuli flex-shrink-0" />
+                                        <span className="text-eerie-black/80">{benefit}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </motion.section>

@@ -44,8 +44,8 @@ const Gallery = () => {
             category: 'laser',
             title: 'IPL Treatment',
             description: 'Sun damage reduction',
-            beforeImage: '/api/placeholder/600/400',
-            afterImage: '/api/placeholder/600/400',
+            beforeImage: 'https://omorfia.s3.eu-north-1.amazonaws.com/beforeipl.png',
+            afterImage: 'https://omorfia.s3.eu-north-1.amazonaws.com/afteripl.png',
             treatment: 'IPL Therapy'
         },
     ];

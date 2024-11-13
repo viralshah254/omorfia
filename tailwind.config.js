@@ -14,7 +14,7 @@ module.exports = {
         'eerie-black': '#1a1e23',
         'lapis-lazuli': '#155f7d',
         'timber-wolf': '#DBD3C9',
-        'monbatten': '#95818D',
+        'monbatten': '#9EB384',
       },
     },
   },

@@ -13,7 +13,7 @@ const Header = () => {
     { path: '/laser', label: 'Laser' },
     { path: '/facial', label: 'Facial' },
     { path: '/peels', label: 'Peels' },
-    { path: '/permanent-tattoo', label: 'Permanent Tattoo' },
+    { path: '/permanent-makeup', label: 'Permanent Makeup' },
     { path: '/spa-treatments', label: 'Spa Treatments' },
     { path: '/price-list', label: 'Price List' },
     { path: '/products', label: 'Products' },
@@ -56,9 +56,9 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="transform hover:scale-105 transition-transform duration-300">
               <img 
-                src="https://omorfia.s3.eu-north-1.amazonaws.com/omorfialogo.png" 
+                src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
                 alt="Omorfia Logo" 
-                className="h-16 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
           </div>
