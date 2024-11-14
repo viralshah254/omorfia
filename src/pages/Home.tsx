@@ -56,20 +56,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    {/* Book Appointment Button */}
-                    <div className="mt-8 w-full md:w-auto">
-                        <Link 
-                            to="/booking"
-                            className="group relative inline-flex items-center justify-center"
-                        >
-                            <div className="absolute inset-0 border border-timber-wolf/30 rounded transform transition-transform duration-300 group-hover:scale-105"></div>
-                            <div className="relative px-6 sm:px-8 py-3 sm:py-4 border border-timber-wolf/60 rounded bg-eerie-black/20 backdrop-blur-sm transform transition-all duration-300 group-hover:bg-eerie-black/40 group-hover:border-timber-wolf">
-                                <span className="font-bodoni text-base sm:text-lg md:text-xl text-timber-wolf group-hover:text-white transition-colors duration-300">
-                                    Book an Appointment
-                                </span>
-                            </div>
-                        </Link>
-                    </div>
+                    
                 </motion.div>
 
                 {/* Right Content */}

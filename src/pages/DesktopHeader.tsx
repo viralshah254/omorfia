@@ -2,39 +2,20 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiMenu } from 'react-icons/hi';
 import { IoMdClose } from 'react-icons/io';
+import { FaPhone } from 'react-icons/fa';
+import { NavigationItems } from './NavigationItems';
 
-// Define types for our navigation items
+interface HeaderProps {
+  location: ReturnType<typeof useLocation>;
+  isScrolled: boolean;
+}
+
 interface NavItem {
   path: string;
   label: string;
 }
 
-interface HeaderProps {
-  location: ReturnType<typeof useLocation>;
-}
-
-// Export this to a separate types file if you prefer
-export const NavigationItems = {
-  mainNavItems: [
-    { path: '/', label: 'Home' },
-    { path: '/team', label: 'Team' },
-    { path: '/products', label: 'Services' },
-    { path: '/gallery', label: 'Gallery' },
-    { path: '/contact', label: 'Contact' },
-  ] as NavItem[],
-  menuItems: [
-    { path: '/laser', label: 'Laser' },
-    { path: '/facial', label: 'Facial' },
-    { path: '/peels', label: 'Peels' },
-    { path: '/permanent-makeup', label: 'Permanent Makeup' },
-    { path: '/spa-treatments', label: 'Spa Treatments' },
-    { path: '/price-list', label: 'Price List' },
-    { path: '/products', label: 'Products' },
-    { path: '/specials', label: 'Specials' },
-  ] as NavItem[],
-};
-
-const DesktopHeader: React.FC<HeaderProps> = ({ location }) => {
+const DesktopHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { mainNavItems, menuItems } = NavigationItems;
@@ -75,7 +56,16 @@ const DesktopHeader: React.FC<HeaderProps> = ({ location }) => {
           </Link>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center space-x-8">
+          {/* Phone CTA */}
+          <a 
+            href="tel:+254114294475" 
+            className="flex items-center space-x-2 border-timber-wolf border-2  bg-lapis-lazuli/5 hover:bg-lapis-lazuli text-white px-6 py-2 rounded-full transition-colors duration-300"
+          >
+            <FaPhone size={14} />
+            <span className="font-bodoni text-lg whitespace-nowrap">Call Us</span>
+          </a>
+
           <div className="border-y border-timber-wolf/30">
             <nav className="flex items-center space-x-12 px-8 py-4">
               {mainNavItems.map((item: NavItem) => (
