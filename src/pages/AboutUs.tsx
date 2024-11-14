@@ -21,48 +21,8 @@ const AboutUs = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="relative h-[60vh] bg-eerie-black overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("https://omorfia.s3.eu-north-1.amazonaws.com/facemassage.jpg")'
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
-        </div>
-
-        {/* Pattern Overlay */}
-        <OrganicPattern />
-
-        {/* Hero Content */}
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-          className="relative h-full flex items-center justify-center text-center px-4"
-        >
-          <div className="max-w-4xl">
-            <motion.h1 
-              variants={fadeInUp}
-              className="font-magenta text-5xl md:text-7xl text-timber-wolf mb-6"
-            >
-              Unveil Your Inner Radiance
-            </motion.h1>
-            <motion.div 
-              variants={fadeInUp}
-              className="w-24 h-1 bg-timber-wolf mx-auto mb-6"
-            />
-            <motion.p 
-              variants={fadeInUp}
-              className="font-bodoni text-xl md:text-2xl text-timber-wolf/80"
-            >
-              Where Beauty Meets Expertise
-            </motion.p>
-          </div>
-        </motion.div>
-      </div>
+     
+      
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-20">
@@ -88,7 +48,7 @@ const AboutUs = () => {
               className="aspect-[4/3]"
             >
               <img 
-                src="/api/placeholder/800/600"
+                src="https://omorfia.s3.eu-north-1.amazonaws.com/IMG_0759.JPG"
                 alt="Spa Treatment"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />

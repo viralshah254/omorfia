@@ -76,10 +76,10 @@ const Header = () => {
                     Home
                   </Link>
                   <Link 
-                    to="/aboutus"
+                    to="/team"
                     className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
                   >
-                    About
+                    Team
                   </Link>
                   <Link 
                     to="/products"

@@ -20,7 +20,7 @@ const LandingPage = () => {
   return (
     <>
       <Home />
-      <OurTeam />
+      <AboutUs />
     </>
   );
 };
@@ -44,6 +44,7 @@ const App: React.FC = () => {
             <Route path="/specials" element={<Specials />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/team" element={<OurTeam />} />
           </Routes>
         </main>
         <Footer />
