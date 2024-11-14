@@ -54,11 +54,11 @@ const Footer = () => {
 
               <div>
                 <a 
-                  href="mailto:info@omorfia.com"
+                  href="mailto:Studioomorfiake@gmail.com"
                   className="font-bodoni text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-center gap-2"
                 >
                   <FaEnvelope className="w-5 h-5" />
-                  <span>info@omorfia.com</span>
+                  <span>Studioomorfiake@gmail.com</span>
                 </a>
               </div>
             </div>

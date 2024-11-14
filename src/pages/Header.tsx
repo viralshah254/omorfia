@@ -20,6 +20,14 @@ const Header = () => {
     { path: '/specials', label: 'Specials' },
   ];
 
+  const mainNavItems = [
+    { path: '/', label: 'Home' },
+    { path: '/team', label: 'Team' },
+    { path: '/products', label: 'Services' },
+    { path: '/gallery', label: 'Gallery' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -47,7 +55,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 mt-4 ${
+    <header className={`fixed w-full z-50 transition-all duration-300 top-0 ${
       isScrolled ? 'bg-eerie-black/90 backdrop-blur-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-[1800px] mx-auto px-6 lg:px-24">
@@ -69,36 +77,15 @@ const Header = () => {
             <div className="hidden md:block">
               <div className="border-y border-timber-wolf/30">
                 <nav className="flex items-center space-x-12 px-8 py-4">
-                  <Link 
-                    to="/"
-                    className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
-                  >
-                    Home
-                  </Link>
-                  <Link 
-                    to="/team"
-                    className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
-                  >
-                    Team
-                  </Link>
-                  <Link 
-                    to="/products"
-                    className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
-                  >
-                    Services
-                  </Link>
-                  <Link 
-                    to="/gallery" 
-                    className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
-                  >
-                    Gallery
-                  </Link>
-                  <Link 
-                    to="/contact"
-                    className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
-                  >
-                    Contact
-                  </Link>
+                  {mainNavItems.map((item) => (
+                    <Link 
+                      key={item.path}
+                      to={item.path}
+                      className="font-bodoni text-lg text-timber-wolf hover:text-white transition-all duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                   
                   {/* Menu Dropdown */}
                   <div className="relative" ref={menuRef}>
@@ -147,36 +134,21 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute left-0 right-0 top-full mt-2 bg-eerie-black/95 backdrop-blur-sm">
             <div className="px-4 py-4 space-y-2">
-              <Link 
-                to="/home"
-                className="block py-2 font-bodoni text-lg text-timber-wolf hover:text-white"
-              >
-                Home
-              </Link>
-              <Link 
-                to="/about"
-                className="block py-2 font-bodoni text-lg text-timber-wolf hover:text-white"
-              >
-                About
-              </Link>
-              <Link 
-                to="/services"
-                className="block py-2 font-bodoni text-lg text-timber-wolf hover:text-white"
-              >
-                Services
-              </Link>
-              <Link 
-                to="/gallery"
-                className="block py-2 font-bodoni text-lg text-timber-wolf hover:text-white"
-              >
-                Gallery
-              </Link>
-              <Link 
-                to="/contact"
-                className="block py-2 font-bodoni text-lg text-timber-wolf hover:text-white"
-              >
-                Contact
-              </Link>
+              {/* Main Navigation Items */}
+              {mainNavItems.map((item) => (
+                <Link 
+                  key={item.path}
+                  to={item.path}
+                  className="block py-2 font-bodoni text-lg text-timber-wolf hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              
+              {/* Divider */}
+              <div className="h-px w-full bg-timber-wolf/20 my-4" />
+              
+              {/* Menu Items */}
               {menuItems.map((item) => (
                 <Link
                   key={item.path}
