@@ -51,7 +51,7 @@ const DesktopHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
             <img 
               src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
               alt="Omorfia Logo" 
-              className="h-24 w-auto"
+              className="h-32 w-auto"
             />
           </Link>
         </div>
@@ -67,7 +67,7 @@ const DesktopHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
           </a>
 
           <div className="border-y border-timber-wolf/30">
-            <nav className="flex items-center space-x-12 px-8 py-4">
+            <nav className="flex items-center space-x-12 px-8 py-3">
               {mainNavItems.map((item: NavItem) => (
                 <Link
                   key={item.path}

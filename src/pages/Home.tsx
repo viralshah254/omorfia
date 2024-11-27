@@ -49,10 +49,10 @@ const Home = () => {
                     {/* Taglines */}
                     <div className="w-full space-y-4 mt-6">
                         <p className="font-magenta text-lg sm:text-xl md:text-2xl text-timber-wolf">
-                            Unveiling Your Inner Grace and Natural Beauty,
+                            Unveiling Your Inner Beauty,
                         </p>
                         <p className="font-magenta text-lg sm:text-xl md:text-2xl text-timber-wolf">
-                            Through Expert Artistry and Timeless Elegance
+                       And brighten your true radiance 
                         </p>
                     </div>
 

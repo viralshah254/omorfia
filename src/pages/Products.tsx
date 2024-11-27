@@ -13,37 +13,32 @@ const treatments = [
   },
   {
     id: 2,
-    title: "Aromatherapy",
-    description: "Therapeutic healing through essential oils",
-    image: "https://omorfia.s3.eu-north-1.amazonaws.com/aromatherapy.jpg",
+    title: "Spa Treatments",
+    description: "Transformative treatments for complete relaxation and renewal",
+    image: "https://viplotusspa.com/wp-content/uploads/2023/09/Choosing-the-Right-Spa-Treatment.jpg",
     linkto: '/spa-treatments'
   },
+  
   {
     id: 3,
-    title: "Reflexology",
-    description: "Holistic pressure point therapy",
-    image: "https://omorfia.s3.eu-north-1.amazonaws.com/reflexology.jpg",
-    linkto: '/spatreatments'
-  },
-  {
-    id: 4,
     title: "Facials",
     description: "Customized skincare solutions",
     image: "https://omorfia.s3.eu-north-1.amazonaws.com/facesteam.jpg",
     linkto: '/facial'
   },
   {
-    id: 5,
+    id: 4,
     title: "Peels",
     description: "Reveal your natural radiance",
-    image: "https://omorfia.s3.eu-north-1.amazonaws.com/face+peel.jpg",
+    image: "https://omorfia.s3.eu-north-1.amazonaws.com/peel_mineral.png",
+
     linkto: '/peels'
   },
   {
-    id: 6,
-    title: "Permanent Tatoo",
+    id: 5,
+    title: "Permanent Makeup",
     description: "Reveal your natural radiance",
-    image: "https://omorfia.s3.eu-north-1.amazonaws.com/pexels-mart-production-8801081.jpg",
+    image: "https://omorfia.s3.eu-north-1.amazonaws.com/lipblush.png",
     linkto: '/permanent-tattoo'
   }
 ];

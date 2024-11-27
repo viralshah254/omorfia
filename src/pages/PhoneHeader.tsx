@@ -41,7 +41,7 @@ const PhoneHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
             <img 
               src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
               alt="Omorfia Logo" 
-              className="h-24 w-auto"
+              className="h-28 w-auto"
             />
           </Link>
         </div>

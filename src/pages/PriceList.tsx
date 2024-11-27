@@ -11,11 +11,20 @@ type PriceItem = {
   isRange?: boolean;
 };
 
+type LaserCategory = {
+  title: string;
+  items: PriceItem[];
+};
+
 type Category = {
   icon: IconType;
   title: string;
   subtitle?: string;
   items: PriceItem[];
+  laserCategories?: {
+    diode: LaserCategory;
+    ipl: LaserCategory;
+  };
 };
 
 type Categories = {
@@ -24,6 +33,7 @@ type Categories = {
 
 const PriceList = () => {
   const [activeCategory, setActiveCategory] = useState<string>('facials');
+  const [activeLaserType, setActiveLaserType] = useState<'diode' | 'ipl'>('diode');
 
   const categories: Categories = {
     facials: {
@@ -56,17 +66,59 @@ const PriceList = () => {
     },
     laser: {
       icon: FaBolt,
-      title: "Laser Hair Removal",
+      title: "Laser Hair Removal (IPL/DIODE)",
       subtitle: "Price adjusted mildly by circumference area",
-      items: [
-        { name: "Half Face", price: 5500 },
-        { name: "Full Face", price: 6500 },
-        { name: "Upper Lip", price: 2500 },
-        { name: "Side Burns", price: 4000 },
-        { name: "Chin", price: 3000 },
-        { name: "Full Legs", price: "10,000-20,000", isRange: true },
-        { name: "Full Body", price: 50000 }
-      ]
+      items: [],
+      laserCategories: {
+        diode: {
+          title: "DIODE",
+          items: [
+            { name: "Half Face", price: 5500 },
+            { name: "Full Face", price: 6500 },
+            { name: "Upper Lip", price: 2500 },
+            { name: "Side Burns", price: 4000 },
+            { name: "Chin", price: 3000 },
+            { name: "Breasts", price: 5000 },
+            { name: "Chest", price: 6500 },
+            { name: "Abdomen", price: 6000 },
+            { name: "Bikini Line", price: 5000 },
+            { name: "Full Bikini", price: 10000 },
+            { name: "Full Legs", price: 20000 },
+            { name: "Half Legs", price: 10000 },
+            { name: "Full Arms", price: 10000 },
+            { name: "Half Arms", price: 6000 },
+            { name: "Under Arms", price: 5000 },
+            { name: "Butt", price: 5000 },
+            { name: "Back/Front", price: 10000 },
+            { name: "Nipple Area", price: 4000 },
+            { name: "Full Body", price: 50000 }
+          ]
+        },
+        ipl: {
+          title: "IPL",
+          items: [
+            { name: "Half Face", price: 4000 },
+            { name: "Full Face", price: 5000 },
+            { name: "Upper Lip", price: 1500 },
+            { name: "Side Burns", price: 3000 },
+            { name: "Chin", price: 2500 },
+            { name: "Breasts", price: 4500 },
+            { name: "Chest", price: 5500 },
+            { name: "Abdomen", price: 5000 },
+            { name: "Bikini Line", price: 4500 },
+            { name: "Full Bikini", price: 10000 },
+            { name: "Full Legs", price: 17000 },
+            { name: "Half Legs", price: 8500 },
+            { name: "Full Arms", price: 8500 },
+            { name: "Half Arms", price: 5000 },
+            { name: "Under Arms", price: 4000 },
+            { name: "Butt", price: 4500 },
+            { name: "Back/Front", price: 8500 },
+            { name: "Nipple Area", price: 3500 },
+            { name: "Full Body", price: 45000 }
+          ]
+        }
+      }
     },
     spa: {
       icon: FaRegGem,
@@ -90,6 +142,60 @@ const PriceList = () => {
         { name: "Lip Shading", price: 15000 }
       ]
     }
+  };
+
+  const renderLaserContent = () => {
+    if (!categories.laser.laserCategories) return null;
+
+    return (
+      <div>
+        <div className="flex gap-4 mb-6">
+          <button
+            onClick={() => setActiveLaserType('diode')}
+            className={`px-6 py-2 rounded-lg transition-all ${
+              activeLaserType === 'diode'
+                ? 'bg-lapis-lazuli text-white'
+                : 'bg-timber-wolf text-lapis-lazuli hover:bg-lapis-lazuli/10'
+            }`}
+          >
+            DIODE
+          </button>
+          <button
+            onClick={() => setActiveLaserType('ipl')}
+            className={`px-6 py-2 rounded-lg transition-all ${
+              activeLaserType === 'ipl'
+                ? 'bg-lapis-lazuli text-white'
+                : 'bg-timber-wolf text-lapis-lazuli hover:bg-lapis-lazuli/10'
+            }`}
+          >
+            IPL
+          </button>
+        </div>
+        <div className="grid gap-4">
+          {categories.laser.laserCategories[activeLaserType].items.map((item, index) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <div>
+                <h3 className="font-medium text-gray-900">{item.name}</h3>
+                {item.duration && (
+                  <p className="text-sm text-gray-500">{item.duration}</p>
+                )}
+              </div>
+              <div className="text-right">
+                <span className="text-lg font-medium text-lapis-lazuli">
+                  KES {typeof item.price === 'number' ? item.price.toLocaleString() : item.price}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -175,29 +281,33 @@ const PriceList = () => {
               )}
             </div>
 
-            <div className="grid gap-4">
-              {categories[activeCategory].items.map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  <div>
-                    <h3 className="font-medium text-gray-900">{item.name}</h3>
-                    {item.duration && (
-                      <p className="text-sm text-gray-500">{item.duration}</p>
-                    )}
-                  </div>
-                  <div className="text-right">
-                    <span className="text-lg font-medium text-lapis-lazuli">
-                      KES {typeof item.price === 'number' ? item.price.toLocaleString() : item.price}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            {activeCategory === 'laser' ? (
+              renderLaserContent()
+            ) : (
+              <div className="grid gap-4">
+                {categories[activeCategory].items.map((item, index) => (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    <div>
+                      <h3 className="font-medium text-gray-900">{item.name}</h3>
+                      {item.duration && (
+                        <p className="text-sm text-gray-500">{item.duration}</p>
+                      )}
+                    </div>
+                    <div className="text-right">
+                      <span className="text-lg font-medium text-lapis-lazuli">
+                        KES {typeof item.price === 'number' ? item.price.toLocaleString() : item.price}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

@@ -98,12 +98,21 @@ const Laser = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="aspect-[4/3] bg-timber-wolf/10">
-                            <img 
-                                src="https://omorfia.s3.eu-north-1.amazonaws.com/laser2d.png" 
-                                alt="Laser Hair Removal"
-                                className="w-full h-full object-cover"
-                            />
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="aspect-[4/3] bg-timber-wolf/10">
+                                <img 
+                                    src="https://cdn.shopify.com/s/files/1/0740/5882/6015/files/Glasses.jpg?v=1726338802" 
+                                    alt="Laser Hair Removal"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="aspect-[4/3] bg-timber-wolf/10">
+                                <img 
+                                    src="https://salemcosmeticclinic.com/asset/images/blogs/1702904833.png" 
+                                    alt="Laser Hair Removal Treatment"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
 

@@ -76,7 +76,7 @@ const Footer = () => {
                 </p>
                 <p className="flex justify-between">
                   <span>Saturday:</span>
-                  <span>10:00 AM - 6:00 PM</span>
+                  <span>9:00 AM - 6:00 PM</span>
                 </p>
                 <p className="flex justify-between">
                   <span>Sunday:</span>
