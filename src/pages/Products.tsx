@@ -39,7 +39,7 @@ const treatments = [
     title: "Permanent Makeup",
     description: "Reveal your natural radiance",
     image: "https://omorfia.s3.eu-north-1.amazonaws.com/lipblush.png",
-    linkto: '/permanent-tattoo'
+    linkto: '/permanent-makeup'
   }
 ];
 
