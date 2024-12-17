@@ -13,8 +13,7 @@ export interface NavItem {
     mainNavItems: [
       { path: '/', label: 'Home' },
       { path: '/products', label: 'Services' },
-      { path: '/gallery', label: 'Gallery' },
-      { path: '/team', label: 'Team' },
+      { path: '/price-list', label: 'Price List' },
       { path: '/contact', label: 'Contact' },
     ],
     menuItems: [

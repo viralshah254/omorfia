@@ -15,6 +15,7 @@ const Contact = () => {
         <div className="absolute inset-0">
           <OrganicPattern />
         </div>
+       
         
         <div className="relative max-w-4xl mx-auto px-4 pt-32 pb-24 sm:px-6 lg:px-8">
           <motion.div 
@@ -23,6 +24,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            
             <h1 className="font-magenta text-4xl md:text-5xl lg:text-6xl text-timber-wolf mb-6">
               Why <span className="text-[#9EB384]">hello</span> there...
             </h1>

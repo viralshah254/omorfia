@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import OrganicPattern from './Patterns';
 
 const treatments = [
   {
@@ -18,7 +19,6 @@ const treatments = [
     image: "https://viplotusspa.com/wp-content/uploads/2023/09/Choosing-the-Right-Spa-Treatment.jpg",
     linkto: '/spa-treatments'
   },
-  
   {
     id: 3,
     title: "Facials",
@@ -31,7 +31,6 @@ const treatments = [
     title: "Peels",
     description: "Reveal your natural radiance",
     image: "https://omorfia.s3.eu-north-1.amazonaws.com/peel_mineral.png",
-
     linkto: '/peels'
   },
   {
@@ -91,9 +90,57 @@ const Products = () => {
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      <div className="h-[15vh] bg-eerie-black"></div>
+      {/* Hero Section */}
+      <div className="relative h-[50vh] bg-eerie-black overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://omorfia.s3.eu-north-1.amazonaws.com/facemassage.jpg")'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
+        </div>
+
+        {/* Pattern Overlay */}
+        <OrganicPattern />
+
+        {/* Content */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative h-full flex items-center justify-center text-center px-4"
+        >
+          <img 
+            src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
+            alt="Omorfia Logo" 
+            className="h-96 w-auto md:px-2 lg:px-4"
+          />
+          <div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="font-magenta text-4xl md:text-6xl lg:text-7xl text-timber-wolf mb-4"
+            >
+              Our Services
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="font-bodoni text-xl md:text-2xl text-timber-wolf/80"
+            >
+              Discover our range of transformative treatments
+            </motion.p>
+          </div>
+        </motion.div>
+      </div>
       
+      {/* Rest of the carousel content */}
       <div className="flex-1 relative overflow-hidden px-4 md:px-6 lg:px-8">
+        {/* ... rest of the existing carousel code ... */}
         <div className="max-w-7xl mx-auto h-full flex items-center justify-center py-8 md:py-12">
           <div className="relative h-full flex flex-col justify-center w-full">
             <div className="absolute top-0 md:top-7 left-0 text-[8rem] md:text-[15rem] font-bold text-timber-wolf/80 leading-none pointer-events-none">

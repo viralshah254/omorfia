@@ -40,6 +40,7 @@ const SpaTreatments = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <div className="relative h-[50vh] bg-eerie-black overflow-hidden">
+
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url(${encodeURI("https://waridi.online/wp-content/uploads/2022/10/A-collection-of-essential-oils-300x300.jpg")})` }}
@@ -55,6 +56,12 @@ const SpaTreatments = () => {
                     transition={{ duration: 1 }}
                     className="relative h-full flex items-center justify-center text-center px-4"
                 >
+
+                    <img 
+                    src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
+                    alt="Omorfia Logo" 
+                    className="h-96 w-auto  md:px-2 lg:px-4"
+                    />
                     <div>
                         <motion.h1 
                             initial={{ opacity: 0, y: 20 }}

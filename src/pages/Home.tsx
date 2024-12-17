@@ -16,7 +16,14 @@ const Home = () => {
             {/* Enhanced gradient overlay */}
             <div 
                 className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/70 to-eerie-black/40"
+            >
+                
+            <img 
+              src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
+              alt="Omorfia Logo" 
+              className="h-64 w-auto pt-4 px-4 md:px-8 lg:px-24"
             />
+            </div>
             
             {/* Content Container */}
             <motion.div 

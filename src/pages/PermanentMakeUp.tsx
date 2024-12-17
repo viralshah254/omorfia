@@ -42,6 +42,12 @@ const PermanentMakeup = () => {
                     transition={{ duration: 1 }}
                     className="relative h-full flex items-center justify-center text-center px-4"
                 >
+
+                    <img 
+                    src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
+                    alt="Omorfia Logo" 
+                    className="h-96 w-auto  md:px-2 lg:px-4"
+                    />
                     <div>
                         <motion.h1 
                             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +111,6 @@ const PermanentMakeup = () => {
                 </motion.section>
 
                 {/* Eyeliner Tattoo Section */}
-                {/* Eyeliner Tattoo Section */}
                 <motion.section variants={itemVariants} className="mb-20">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 grid grid-cols-2 gap-4">
@@ -131,7 +136,7 @@ const PermanentMakeup = () => {
                             <p className="text-eerie-black/80 mb-6">
                                 A long-lasting, smudge-proof alternative to traditional eyeliner, creating a defined and elegant look that requires minimal maintenance.
                             </p>
-                            <div className="space-y-3">
+                            <div className="space-y-3 mb-8">
                                 {[
                                     'Smudge-proof results',
                                     'Customizable thickness',
@@ -145,9 +150,43 @@ const PermanentMakeup = () => {
                                     </div>
                                 ))}
                             </div>
+                            
+                            {/* New Key Details Section */}
+                            <div className="bg-timber-wolf/10 p-6 rounded-lg">
+                                <h3 className="font-bodoni text-2xl text-lapis-lazuli mb-4">
+                                    Key Details About Eyeliner Tattoo
+                                </h3>
+                                <div className="space-y-6">
+                                    <div>
+                                        <h4 className="font-bodoni text-xl text-lapis-lazuli mb-2">Consultation</h4>
+                                        <p className="text-eerie-black/80">
+                                            Before getting the procedure, you'll have a consultation with the technician to discuss your preferred style. The technician will measure your eyes and ensure the design complements your eye shape and color.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bodoni text-xl text-lapis-lazuli mb-2">Numbing</h4>
+                                        <p className="text-eerie-black/80">
+                                            To minimize discomfort, a topical numbing cream is applied to the eyelid. Some people may experience mild discomfort during the procedure, but it's generally tolerable.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bodoni text-xl text-lapis-lazuli mb-2">Pigment Application</h4>
+                                        <p className="text-eerie-black/80">
+                                            The technician uses a tattoo machine or hand-held tool to carefully deposit pigment along the lash line. The procedure can be done on the upper and lower lash lines or just the upper lashes, depending on your preference.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bodoni text-xl text-lapis-lazuli mb-2">Healing</h4>
+                                        <p className="text-eerie-black/80">
+                                            Healing typically takes around 7-10 days, but full color retention and final results may take up to 6-8 weeks. Touch-ups are often required after the initial healing phase.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </motion.section>
+
                 {/* Lip Blushing Section */}
                 <motion.section variants={itemVariants} className="mb-20">
                     <div className="grid md:grid-cols-2 gap-12 items-center">

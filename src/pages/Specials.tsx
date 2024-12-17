@@ -11,7 +11,7 @@ const Specials = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://img.freepik.com/foto-gratis/accesorios-spa-sobre-fondo-oscuro_1220-3735.jpg?t=st=1731494332~exp=1731497932~hmac=8a4fb6380bc4003d49306d95c0d36bdc894395487271597945249baa4690ba10&w=996')`
+            backgroundImage: `url('https://img1.wsimg.com/isteam/stock/WV8rgKj/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280')`
           }}
         >
           {/* Gradient overlay */}

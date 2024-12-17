@@ -26,10 +26,10 @@ const Header = () => {
         isScrolled ? 'bg-eerie-black/90 backdrop-blur-sm' : 'bg-transparent'
       }`}
     >
-      <div className="hidden md:block">
+      <div className="hidden md:block pt-6">
         <DesktopHeader {...headerProps} />
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden pt-6">
         <PhoneHeader {...headerProps} />
       </div>
     </header>
