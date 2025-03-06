@@ -105,11 +105,11 @@ const PhoneHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
             {/* Phone CTA in Menu */}
             <div className="mt-6 pt-4 border-t border-timber-wolf/20">
               <a 
-                href="tel:+1234567890" 
+                href="tel:+254 719 782 642" 
                 className="flex items-center justify-center space-x-2 bg-monbatten hover:bg-lapis-lazuli text-white py-3 rounded-lg transition-colors duration-300"
               >
                 <FaPhone size={16} />
-                <span className="font-bodoni text-lg">+123 456 7890</span>
+                <span className="font-bodoni text-lg">+254 719 782 642</span>
               </a>
             </div>
           </div>
