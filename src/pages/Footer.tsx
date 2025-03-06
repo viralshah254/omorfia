@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8">
             {/* Contact Info */}
             <div className="space-y-6">
-              <h3 className="font-bodoni text-lapis-lazuli text-xl flex items-center gap-2">
+              <h3 className="font-sans text-lapis-lazuli text-xl flex items-center gap-2">
                 <FaPhoneAlt className="w-5 h-5" />
                 Booking Contacts
               </h3>
@@ -31,7 +31,7 @@ const Footer = () => {
                   <a 
                     key={number}
                     href={`tel:${number.replace(/\s+/g, '')}`}
-                    className="font-bodoni text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-center gap-2"
+                    className="font-magenta text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-center gap-2"
                   >
                     <span>{number}</span>
                     <FaExternalLinkAlt className="w-3 h-3 inline-block" />
@@ -44,10 +44,10 @@ const Footer = () => {
                   href={locationUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bodoni text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-start gap-2"
+                  className="font-sans text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-start gap-2"
                 >
                   <FaMapMarkerAlt className="w-5 h-5 flex-shrink-0 mt-1" />
-                  <span>67, General Mathenge,<br />Nairobi, Kenya</span>
+                  <span className="font-sans">67, General Mathenge,<br />Nairobi, Kenya</span>
                   <FaExternalLinkAlt className="w-3 h-3 flex-shrink-0 mt-1" />
                 </a>
               </div>
@@ -55,7 +55,7 @@ const Footer = () => {
               <div>
                 <a 
                   href="mailto:Studioomorfiake@gmail.com"
-                  className="font-bodoni text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-center gap-2"
+                  className="font-sans text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 flex items-center gap-2"
                 >
                   <FaEnvelope className="w-5 h-5" />
                   <span>Studioomorfiake@gmail.com</span>
@@ -65,11 +65,11 @@ const Footer = () => {
   
             {/* Hours */}
             <div className="space-y-6">
-              <h3 className="font-bodoni text-lapis-lazuli text-xl flex items-center gap-2">
+              <h3 className="font-sans text-lapis-lazuli text-xl flex items-center gap-2">
                 <FaClock className="w-5 h-5" />
                 Hours
               </h3>
-              <div className="font-bodoni text-timber-wolf space-y-3">
+              <div className="font-sans text-timber-wolf space-y-3">
                 <p className="flex justify-between">
                   <span>Monday - Friday:</span>
                   <span>9:00 AM - 7:00 PM</span>
@@ -87,7 +87,7 @@ const Footer = () => {
   
             {/* Social */}
             <div className="space-y-6">
-              <h3 className="font-bodoni text-lapis-lazuli text-xl flex items-center gap-2">
+              <h3 className="font-sans text-lapis-lazuli text-xl flex items-center gap-2">
                 <FaInstagram className="w-5 h-5" />
                 Connect With Us
               </h3>
@@ -96,7 +96,7 @@ const Footer = () => {
                   href="https://www.instagram.com/studio0morfia/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 font-bodoni"
+                  className=" inline-flex items-center gap-2 text-timber-wolf hover:text-lapis-lazuli transition-colors duration-300 font-sans"
                 >
                   <FaInstagram className="w-5 h-5" />
                   <span>@studio0morfia</span>
@@ -108,7 +108,7 @@ const Footer = () => {
   
           {/* Bottom Bar */}
           <div className="mt-12 lg:mt-16 pt-8 border-t border-timber-wolf/10 text-center">
-            <p className="font-bodoni text-timber-wolf/60 text-sm">
+            <p className="font-magenta text-timber-wolf/60 text-sm">
               © {new Date().getFullYear()} Studio Omorfia. All rights reserved.
             </p>
           </div>
