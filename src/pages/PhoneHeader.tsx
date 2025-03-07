@@ -29,7 +29,7 @@ const PhoneHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
   };
 
   return (
-    <div className="max-w-[1800px] mx-auto px-6">
+    <div className="max-w-[1800px] mx-auto px-4">
       <div className="flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex-shrink-0">
@@ -38,28 +38,32 @@ const PhoneHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
             onClick={() => handleNavClick('/')}
             className="transform hover:scale-105 transition-transform duration-300"
           >
-           
+            <img 
+              src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
+              alt="Omorfia Logo" 
+              className="h-20 w-auto" 
+            />
           </Link>
         </div>
 
         {/* Phone CTA and Menu Button */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           <a 
             href="tel:+254114294475" 
-            className="flex items-center space-x-2 border-timber-wolf border-2  bg-lapis-lazuli/5 hover:bg-lapis-lazuli text-white px-4 py-2 rounded-full transition-colors duration-300"
+            className="flex items-center space-x-1 border-timber-wolf border text-white px-2 py-1 rounded-full transition-colors duration-300 bg-lapis-lazuli/5 hover:bg-lapis-lazuli"
           >
-            <FaPhone size={14} className="animate-pulse" />
-            <span className="font-bodoni text-sm">Call Us</span>
+            <FaPhone size={12} className="animate-pulse" />
+            <span className="font-bodoni text-xs">Call</span>
           </a>
           <button
-            className="text-timber-wolf hover:text-white transition-colors duration-200 p-2"
+            className="text-timber-wolf hover:text-white transition-colors duration-200 p-1"
             onClick={() => {
               console.log('Mobile menu toggle clicked');
               setIsMenuOpen(!isMenuOpen);
             }}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <IoMdClose size={24} /> : <HiMenu size={24} />}
+            {isMenuOpen ? <IoMdClose size={20} /> : <HiMenu size={20} />}
           </button>
         </div>
       </div>
@@ -67,10 +71,10 @@ const PhoneHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className={`
-          fixed left-0 right-0 top-[96px] 
+          fixed left-0 right-0 top-[72px] 
           ${isScrolled ? 'bg-eerie-black/90' : 'bg-eerie-black/95'} 
           backdrop-blur-sm 
-          max-h-[calc(100vh-96px)] 
+          max-h-[calc(100vh-72px)] 
           overflow-y-auto 
           z-50
         `}>
