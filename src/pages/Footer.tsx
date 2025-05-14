@@ -10,8 +10,8 @@ import {
 
 const Footer = () => {
     const bookingNumbers = [
-      '+254719 782 642',
-      '+254733 782 642'
+      '+254 719 782 642',
+      '+254 733 782 642'
     ];
 
     const locationUrl = "https://maps.google.com/?q=67+General+Mathenge+Nairobi+Kenya";
