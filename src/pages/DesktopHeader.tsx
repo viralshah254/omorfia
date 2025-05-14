@@ -55,7 +55,7 @@ const DesktopHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
         <div className="flex items-center space-x-8">
           {/* Phone CTA */}
           <a 
-            href="tel:+254114294475" 
+            href="tel:+254733782642" 
             className="flex items-center space-x-2 border-timber-wolf border-2  bg-lapis-lazuli/5 hover:bg-lapis-lazuli text-white px-6 py-2 rounded-full transition-colors duration-300"
           >
             <FaPhone size={14} />

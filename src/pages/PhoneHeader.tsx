@@ -45,7 +45,7 @@ const PhoneHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
         {/* Phone CTA and Menu Button */}
         <div className="flex items-center space-x-4">
           <a 
-            href="tel:+254114294475" 
+            href="tel:+254733782642" 
             className="flex items-center space-x-2 border-timber-wolf border-2  bg-lapis-lazuli/5 hover:bg-lapis-lazuli text-white px-4 py-2 rounded-full transition-colors duration-300"
           >
             <FaPhone size={14} className="animate-pulse" />
