@@ -91,52 +91,48 @@ const Products = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Hero Section */}
-      <div className="relative h-[50vh] bg-eerie-black overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("https://omorfia.s3.eu-north-1.amazonaws.com/facemassage.jpg")'
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
-        </div>
+      <div className="relative h-[35vh] md:h-[40vh] bg-eerie-black overflow-hidden">
+  {/* Background Image */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: 'url("https://omorfia.s3.eu-north-1.amazonaws.com/facemassage.jpg")'
+    }}
+  >
+    <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
+  </div>
 
-        {/* Pattern Overlay */}
-        <OrganicPattern />
+  {/* Pattern Overlay */}
+  <OrganicPattern />
 
-        {/* Content */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative h-full flex items-center justify-center text-center px-4"
-        >
-          <img 
-            src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
-            alt="Omorfia Logo" 
-            className="h-96 w-auto md:px-2 lg:px-4"
-          />
-          <div>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="font-magenta text-4xl md:text-6xl lg:text-7xl text-timber-wolf mb-4"
-            >
-              Our Services
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="font-bodoni text-xl md:text-2xl text-timber-wolf/80"
-            >
-              Discover our range of transformative treatments
-            </motion.p>
-          </div>
-        </motion.div>
-      </div>
+  {/* Content */}
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="relative h-full flex items-center justify-center text-center px-4 pt-12 md:pt-16"
+  >
+    <div>
+      <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="font-magenta text-3xl md:text-5xl lg:text-7xl text-timber-wolf mb-2 md:mb-4"
+      >
+        Our Services
+      </motion.h1>
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        className="font-bodoni text-base md:text-xl text-timber-wolf/80"
+      >
+        Discover our range of transformative treatments
+      </motion.p>
+    </div>
+  </motion.div>
+</div>
+
       
       {/* Rest of the carousel content */}
       <div className="flex-1 relative overflow-hidden px-4 md:px-6 lg:px-8">

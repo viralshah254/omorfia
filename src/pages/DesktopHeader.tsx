@@ -48,7 +48,11 @@ const DesktopHeader: React.FC<HeaderProps> = ({ location, isScrolled }) => {
             onClick={() => handleNavClick('/')}
             className="transform hover:scale-105 transition-transform duration-300"
           >
-            
+            <img 
+              src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
+              alt="Omorfia Logo" 
+              className="h-32 w-auto" 
+            />
           </Link>
         </div>
 

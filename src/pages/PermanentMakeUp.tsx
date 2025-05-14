@@ -26,48 +26,43 @@ const PermanentMakeup = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative h-[50vh] bg-eerie-black overflow-hidden">
-                <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url("/api/placeholder/1200/600")' }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
-                </div>
+            <div className="relative h-[30vh] md:h-[40vh] bg-eerie-black overflow-hidden">
+    <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url("/api/placeholder/1200/600")' }}
+    >
+        <div className="absolute inset-0 bg-gradient-to-b from-eerie-black/90 via-eerie-black/80 to-eerie-black/70" />
+    </div>
 
-                <OrganicPattern />
+    <OrganicPattern />
 
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    className="relative h-full flex items-center justify-center text-center px-4"
-                >
+    <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative h-full flex items-center justify-center text-center px-4"
+    >
+        <div className="max-w-3xl">
+            <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="font-magenta text-3xl md:text-5xl lg:text-7xl text-timber-wolf mb-2"
+            >
+                Permanent Makeup
+            </motion.h1>
+            <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                className="font-bodoni text-sm md:text-xl text-timber-wolf/80"
+            >
+                Effortless beauty that lasts
+            </motion.p>
+        </div>
+    </motion.div>
+</div>
 
-                    <img 
-                    src="https://omorfia.s3.eu-north-1.amazonaws.com/grad_logo.png" 
-                    alt="Omorfia Logo" 
-                    className="h-96 w-auto  md:px-2 lg:px-4"
-                    />
-                    <div>
-                        <motion.h1 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.2 }}
-                            className="font-magenta text-4xl md:text-6xl lg:text-7xl text-timber-wolf mb-4"
-                        >
-                            Permanent Makeup
-                        </motion.h1>
-                        <motion.p 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.4 }}
-                            className="font-bodoni text-xl md:text-2xl text-timber-wolf/80"
-                        >
-                            Effortless beauty that lasts
-                        </motion.p>
-                    </div>
-                </motion.div>
-            </div>
 
             <motion.div 
                 variants={containerVariants}
